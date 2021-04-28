@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
@@ -21,22 +20,7 @@ namespace VictorianPlumbing.Infrastructure.Repositories
             Db = new SqlConnection(connectionString);
         }
 
-        public Task<IReadOnlyCollection<PlumbingOrder>> GetAllOrders()
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task StoreOder(PlumbingOrder order)
-        {
-            throw new NotImplementedException();
-        }
-
-        private async Task storeCustomer(Customer customer)
-        {
-            throw new NotImplementedException();
-        }
-
-        private async Task storeBasket(Customer customer)
+        public Task StoreOder(PlumbingOrder order)
         {
             throw new NotImplementedException();
         }

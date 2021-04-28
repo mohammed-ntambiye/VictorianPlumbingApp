@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace VictorianPlumbing.Domain
+namespace VictorianPlumbing.Domain.Order
 {
     public class PlumbingOrder
     {

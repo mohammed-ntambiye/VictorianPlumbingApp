@@ -4,7 +4,7 @@ using VictorianPlumbing.Domain;
 
 namespace VictorianPlumbingApp.Controllers
 {
-    public class OrdersController : Controller
+    public class CustomerController : Controller
     {
         public IActionResult Index()
         {
@@ -12,17 +12,17 @@ namespace VictorianPlumbingApp.Controllers
         }
 
         /// <summary>
-        /// Receives a Plumbing Order
+        /// Receives a customer
         /// </summary>
-        /// <param name="plumbingOrder"></param>
+        /// <param name="customer"></param>
         /// <returns></returns>
         [HttpPost]
-        [Route("plumbing-order")]
-        public async Task<ActionResult> Post([FromBody] PlumbingOrder plumbingOrder)
+        [Route("Customer")]
+        public async Task<ActionResult> Post([FromBody] Customer customer)
         {
-            if (plumbingOrder == null)
+            if (customer == null)
             {
-                return BadRequest($"Empty {nameof(plumbingOrder)} was submitted");
+                return BadRequest($"Empty {nameof(customer)} was submitted");
             }
             return Ok();
         }

@@ -1,4 +1,4 @@
-﻿namespace VictorianPlumbing.Domain
+﻿namespace VictorianPlumbing.Domain.Customer
 {
     public class Customer
     {
