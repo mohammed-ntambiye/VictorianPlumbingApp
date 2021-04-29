@@ -1,9 +1,10 @@
 ﻿using System.Threading.Tasks;
+using VictorianPlumbing.Domain;
 
-namespace VictorianPlumbing.Infrastructure.Repositories.Customer
+namespace VictorianPlumbing.Infrastructure.Repositories
 {
     public interface ICustomerRepository
     {
-        Task StoreCustomer(Domain.Customer customer);
+        Task StoreCustomer(Customer customer);
     }
 }

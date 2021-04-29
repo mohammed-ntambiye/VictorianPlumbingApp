@@ -1,4 +1,4 @@
-﻿namespace VictorianPlumbing.Domain.Prodct
+﻿namespace VictorianPlumbing.Domain
 {
     public class Product
     {

@@ -1,9 +1,10 @@
 ﻿using System.Threading.Tasks;
+using VictorianPlumbing.Domain;
 
-namespace VictorianPlumbing.Infrastructure.Repositories.Product
+namespace VictorianPlumbing.Infrastructure.Repositories
 {
     public interface IProductRepository
     {
-        Task StoreOder(VictorianPlumbing.Domain.Product order);
+        Task StoreOder(Product order);
     }
 }

@@ -2,9 +2,9 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
-using VictorianPlumbing.Infrastructure.Repositories.Product;
+using VictorianPlumbing.Domain;
 
-namespace VictorianPlumbing.Infrastructure.Repositories.Products
+namespace VictorianPlumbing.Infrastructure.Repositories
 {
     public class ProductsRepository : IProductRepository
     {
@@ -20,7 +20,7 @@ namespace VictorianPlumbing.Infrastructure.Repositories.Products
             Db = new SqlConnection(connectionString);
         }
 
-        public Task StoreOder(Domain.Product order)
+        public Task StoreOder(Product order)
         {
             throw new System.NotImplementedException();
         }
