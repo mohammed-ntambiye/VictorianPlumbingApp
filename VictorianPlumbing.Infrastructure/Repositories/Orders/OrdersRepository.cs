@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Threading.Tasks;
 using VictorianPlumbing.Domain;
 
@@ -14,10 +13,10 @@ namespace VictorianPlumbing.Infrastructure.Repositories
         {
             if (string.IsNullOrEmpty(connectionString))
             {
-                throw new ArgumentNullException(nameof(connectionString));
+                // throw new ArgumentNullException(nameof(connectionString));
             }
 
-            Db = new SqlConnection(connectionString);
+            // Db = new SqlConnection(connectionString);
         }
 
         public Task StoreOder(PlumbingOrder order)

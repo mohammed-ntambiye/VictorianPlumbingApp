@@ -20,7 +20,9 @@ namespace VictorianPlumbingApp.Configurations
             configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
 
             var result = services
-                .AddTransient<IOrdersRepository>(s => new OrdersRepository("test"));
+                .AddTransient<IOrdersRepository>(s => new OrdersRepository(""))
+                .AddTransient<ICustomerRepository>(s => new CustomerRepository(""))
+            .AddTransient<IProductsRepository>(s => new ProductsRepository(""));
 
             return result;
         }

@@ -22,11 +22,16 @@ namespace VictorianPlumbingApp
             services.AddControllers();
             services.AddSwaggerGen();
             ConfigureRepositories(services);
+            ServicesConfiguration(services);
         }
 
         /// <summary>Registers the repository layer.</summary>
         public virtual IServiceCollection ConfigureRepositories(IServiceCollection services)
             => services.ConfigureRepositories(Configuration);
+
+        /// <summary>Registers the repository layer.</summary>
+        public virtual IServiceCollection ServicesConfiguration(IServiceCollection services)
+            => services.ConfigureServices();
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

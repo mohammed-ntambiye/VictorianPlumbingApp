@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using VictorianPlumbing.Domain.Services;
+using VictorianPlumbingApp.Services;
 
 namespace VictorianPlumbingApp.Configurations
 {

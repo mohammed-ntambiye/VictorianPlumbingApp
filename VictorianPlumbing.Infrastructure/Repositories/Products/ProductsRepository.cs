@@ -1,12 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Threading.Tasks;
 using VictorianPlumbing.Domain;
 
 namespace VictorianPlumbing.Infrastructure.Repositories
 {
-    public class ProductsRepository : IProductRepository
+    public class ProductsRepository : IProductsRepository
     {
         protected IDbConnection Db { get; private set; }
 
@@ -14,15 +14,15 @@ namespace VictorianPlumbing.Infrastructure.Repositories
         {
             if (string.IsNullOrEmpty(connectionString))
             {
-                throw new ArgumentNullException(nameof(connectionString));
+                // throw new ArgumentNullException(nameof(connectionString));
             }
 
-            Db = new SqlConnection(connectionString);
+            //Db = new SqlConnection(connectionString);
         }
 
-        public Task StoreOder(Product order)
+        public Task StoreProducts(List<Product> products)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

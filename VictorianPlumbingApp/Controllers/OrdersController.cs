@@ -1,11 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using VictorianPlumbing.Domain;
+using VictorianPlumbingApp.Services;
 
 namespace VictorianPlumbingApp.Controllers
 {
     public class OrdersController : Controller
     {
+        private readonly IPlumbingOrderService PlumbingOrderService;
+
+        public OrdersController(IPlumbingOrderService plumbingOrderService)
+        {
+            PlumbingOrderService = plumbingOrderService;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -24,7 +32,8 @@ namespace VictorianPlumbingApp.Controllers
             {
                 return BadRequest($"Empty {nameof(plumbingOrder)} was submitted");
             }
-            return Ok();
+            var result = await PlumbingOrderService.HandleOder(plumbingOrder);
+            return Ok(result);
         }
     }
 }
